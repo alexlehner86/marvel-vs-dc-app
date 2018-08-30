@@ -1,6 +1,8 @@
 # Marvel-vs-DC-App
 
-You can see a live version of this project [here](https://alexlehner86.github.io/marvel-vs-dc-app/). This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
+You can see a live version of this project [here](https://alexlehner86.github.io/marvel-vs-dc-app/).
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
 
 ## Development server
 
