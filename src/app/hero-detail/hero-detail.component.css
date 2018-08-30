@@ -1,0 +1,28 @@
+.heroDetailDiv {
+    margin: 30px auto;
+    padding: 20px 0;
+    max-width: 300px;
+    background-image: linear-gradient(to bottom right, #FFEC8B, orange);
+    border-radius: 20px;
+}
+
+.badge {
+    display: inline-block;
+    width: 100%;
+    font-size: small;
+    text-align: center;
+    color: white;
+    background-color: #666;
+    padding: 8px;
+    margin-right: 0;
+    border-radius: 4px;
+  }
+
+  button {
+      display: inline-block;
+      width: 50%;
+  }
+
+  button.fullWidth {
+      width: 100%;
+  }

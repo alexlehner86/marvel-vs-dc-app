@@ -1,1 +1,157 @@
-/* You can add global styles to this file, and also import other style files */
+    /* Application-wide Styles */
+    h1 {
+      max-width: 950px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.9);
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 30pt;
+      font-weight: bold;
+      text-align: center;
+      margin: 30px auto;
+      padding: 20px 0;
+    }
+    h2, h3 {
+      color: #444;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: lighter;
+    }
+    h2 {
+      font-size: 16pt;
+    }
+    h3 {
+      text-align: center; 
+      margin-top: 20px;
+    }
+    body {
+      box-sizing: border-box;
+      margin: 2em;
+      background-image: url('./assets/lightning-pattern.jpg');
+    }
+    body, input[text], button {
+      color: #888;
+      font-family: Cambria, Georgia;
+    }
+
+    .navItemActive, .navItemInactive {
+      display: inline-block;
+      color: #444;
+      margin: 0 3px;
+      padding: 5px 10px;
+      font-size: 10pt;
+      font-weight: bolder;
+      text-align: center;
+      border-radius: 5px 5px 0 0;
+    }
+    .navItemActive {
+      color: black;
+      background-color: #FFEC8B;
+      border-bottom: 1px solid #FFEC8B;
+    }
+    .navItemInactive {
+      background-color: lightgoldenrodyellow;
+      border-bottom: 1px solid #aaa;
+    }
+    .navItemActive:hover, .navItemInactive:hover {
+      cursor: pointer;
+    }
+
+    .centerMe {
+      margin: 20px auto;
+      width: 80px;
+    }
+
+    footer p {
+      margin: 20px auto;
+      padding: 5px;
+      max-width: 500px;
+      font-size: 10pt;
+      color: #999;
+      background-color: white;
+      text-align: center;
+    }
+
+    /* everywhere else */
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Hero Cards styling */
+    .main-container {
+      background-image: linear-gradient(to bottom right, #FFEC8B, orange);
+      border-radius: 20px;
+    }
+    
+    .hero-grid {
+      display: grid;
+      grid-template: auto / repeat(3, 1fr);
+      justify-items: center;
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+    
+    @media screen and (min-width: 1400px) {
+      .hero-grid {
+        grid-template: auto / repeat(4, 1fr);
+      }
+    }
+  
+    @media screen and (max-width: 970px) {
+      .hero-grid {
+        grid-template: auto / repeat(2, 1fr);
+      }
+    }
+  
+    @media screen and (max-width: 570px) {
+      .hero-grid {
+        grid-template: auto / 1fr;
+      }
+    }
+  
+    .hero-item {
+      position: relative;
+      width: 200px;
+      height: 300px;
+      margin: 10px;
+      border-radius: 20px;
+      background-position: center;
+      background-color: #444;
+      /* Make the background image cover the area of the <div>, and clip the excess */
+      background-size: cover;
+      border: 2px solid white;
+      box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+      cursor: pointer;
+    }
+  
+    .hero-item p {
+      position: absolute;
+      bottom: 0px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 5px;
+      margin: 10px 0;
+      color: black;
+      background-color: white;
+      text-transform: uppercase;
+      text-align: center;
+      letter-spacing: 2px;
+      font-size: 10pt;
+      font-family: "Courier New";
+      font-weight: bold;
+    }
+  
+    .isDC, .isMarvel {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      z-index: 5;
+      height: 50px;
+      width: 50px;
+    }
+
+    .isDC {
+      background-image: url('./assets/DC_comics_logo.svg');
+    }
+
+    .isMarvel {
+      background-image: url('./assets/marvel_logo.svg');
+    }

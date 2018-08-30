@@ -1,0 +1,28 @@
+<div *ngIf="messageService.showAddHero" class="overlayContainer">
+  <div class="overlayWhiteBox">
+    <h2>Add New Hero</h2>
+    <form name="form" onSubmit={this.handleSubmit}>
+      <div class="form-group">
+          <label htmlFor="name">Name:</label>
+          <input type="text" class="form-control" name="name"
+                 [(ngModel)]="hero.name" placeholder="Hero's Name">
+      </div>
+      <div className="form-group">
+        <label htmlFor="team">Team:</label>
+        <div class="myCheckboxGroup">
+          <input type="checkbox" [checked]="hero.isMarvel" (change)="hero.isMarvel = !hero.isMarvel" />&nbsp;Marvel&nbsp;
+          <input type="checkbox" [checked]="!hero.isMarvel" (change)="hero.isMarvel = !hero.isMarvel" />&nbsp;DC
+        </div>
+    </div>
+      <div className="form-group">
+          <label htmlFor="imgUrl">Image URL:</label>
+          <textarea name="imgUrl" class="form-control" rows="3" style="resize: none;"
+                    [(ngModel)]="hero.imgUrl" placeholder="Please enter the URL of the image you want to use"></textarea>
+      </div>
+       <div className="form-group">
+        <button class="btn btn-success" type="button" (click)="addHero()">Add</button>
+        <button class="btn btn-default" type="button" (click)="messageService.hideAddHeroOverlay()">Cancel</button>
+       </div>
+    </form>
+  </div>
+</div>

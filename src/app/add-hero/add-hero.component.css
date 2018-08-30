@@ -1,0 +1,54 @@
+    /* MessagesComponent's private CSS styles */
+
+    body {
+        margin: 2em;
+      }
+      body, input[text], button, p {
+        font-family: Cambria, Georgia;
+      }
+
+      input[text], textarea {
+          width: 100%;
+      }
+
+      textarea {
+        font-size: 9pt;
+      }
+
+      button {
+          width: 50%;
+          margin-top: 10px;
+      }
+
+      .myCheckboxGroup {
+        display: inline;
+        margin-left: 10px;
+      }
+  
+  /* -------------------------------------------- */
+  /*   Styling for overlay + messages container   */
+  /* -------------------------------------------- */
+    .overlayContainer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      z-index: 10;
+      background-color: rgba(0, 0, 0, 0.9); }
+    
+    .overlayWhiteBox {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      width: 300px;
+      z-index: 11;
+      background-color: white; }
+    
+    /* -------------------------- */

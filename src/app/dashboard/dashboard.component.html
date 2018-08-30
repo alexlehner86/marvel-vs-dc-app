@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-10 offset-lg-1">
+      <nav>
+        <h2 routerLink="/dashboard" class="navItemActive">Dashboard</h2>
+        <h2 routerLink="/heroes" class="navItemInactive">Heroes</h2>
+      </nav>
+    </div>
+  </div>
+  <div  class="row">
+    <div class="main-container col-lg-10 offset-lg-1">
+      <h3>Random Marvel vs DC Fight</h3>
+      <p *ngIf="heroes.length === 0" class="centerMe">Loading...</p>
+      <div *ngIf="heroes.length > 0" class="opponents-grid">
+        <div *ngFor="let hero of opponents" routerLink="/detail/{{hero.id}}"
+             class="opponent-item" [ngStyle]="{'background-image': hero.imgUrl}">
+          <p>{{hero.name}}</p>
+          <div [class.isDC]="hero.isMarvel === false"></div>
+          <div [class.isMarvel]="hero.isMarvel === true"></div>
+        </div>
+        <div class="myVS">VS</div>
+      </div>
+      <div class="centerMeDIV">
+        <button type="button" class="btn btn-success btn-sm" (click)="onNewMatch()">New Match</button>
+      </div>
+    </div>
+  </div>
+</div>

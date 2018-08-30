@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-10 offset-lg-1">
+      <nav>
+          <h2 routerLink="/dashboard" class="navItemInactive">Dashboard</h2>
+          <h2 routerLink="/heroes" class="navItemActive">Heroes</h2>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="main-container col-lg-10 offset-lg-1">
+      <h3>List of all Heroes</h3>
+      <p *ngIf="!heroes" class="centerMe">Loading...</p>
+      <app-hero-search *ngIf="heroes"></app-hero-search>
+      <div *ngIf="heroes" class="hero-grid">
+        <div *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}"
+             class="hero-item" [ngStyle]="{'background-image': hero.imgUrl}">
+          <p>{{hero.name}}</p>
+          <div [class.isDC]="hero.isMarvel === false"></div>
+          <div [class.isMarvel]="hero.isMarvel === true"></div>
+        </div>
+        <div class="hero-item" style="background-image: url('./assets/add-item.png');" 
+             (click)="messageService.showAddHeroOverlay()">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-add-hero [heroes]='heroes'></app-add-hero>

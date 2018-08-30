@@ -1,0 +1,121 @@
+/* DashboardComponent's private CSS styles */
+  .main-container {
+    background-image: linear-gradient(to bottom right, #FFEC8B, orange);
+    border-radius: 20px;
+  }
+
+  .opponents-grid {
+    position: relative;
+    display: grid;
+    grid-template: auto / repeat(2, 1fr);
+    justify-items: center;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+
+  .myVS {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+    z-index: 6;
+    color: white;
+    font-size: 30pt;
+    font-weight: bold;
+    background-color: darkgoldenrod;
+    border: 3px solid white;
+    border-radius: 50px;
+  }
+
+  .opponent-item {
+    position: relative;
+    width: 80%;
+    height: 40vw;
+    margin: 10px;
+    border-radius: 20px;
+    background-position: center;
+    background-color: #444;
+    /* Make the background image cover the area of the <div>, and clip the excess */
+    background-size: cover;
+    border: 2px solid white;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    cursor: pointer;
+  }
+
+  .opponent-item p {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    margin: 10px 0;
+    color: black;
+    background-color: white;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 10pt;
+    font-family: "Courier New";
+    font-weight: bold;
+  }
+
+  button {
+      font-size: 18pt;
+      width: 200px;
+      margin-bottom: 20px;
+  }
+
+  .centerMeDIV {
+      width: 200px;
+      margin: 0 auto;
+  }
+
+  @media screen and (max-width: 570px) {
+    .opponents-grid {
+        grid-template: auto / 1fr;
+    }
+    .opponent-item {
+        height: 80vw;
+    }
+    .opponent-item:first-child {
+        margin-bottom: 150px;
+    }
+  }
+
+  @media screen and (min-width: 760px) {
+    .isDC, .isMarvel {
+        top: -15px;
+        right: -15px;
+        height: 65px;
+        width: 65px;
+      }
+
+      .opponent-item p {
+        font-size: 15pt;
+    }
+  }
+
+  @media screen and (min-width: 1100px) {
+    .isDC, .isMarvel {
+        top: -20px;
+        right: -20px;
+        height: 80px;
+        width: 80px;
+      }
+    
+      .opponent-item p {
+          font-size: 18pt;
+      }
+  }
+
+  @media screen and (min-width: 1400px) {
+    .opponent-item {
+        width: 380px;
+        height: 560px;
+    }
+  }
