@@ -15,7 +15,7 @@ export class AddHeroComponent implements OnInit {
   hero: Hero;
 
   constructor(private heroService: HeroService,
-              private messageService: MessageService) { }
+              public messageService: MessageService) { }
 
   ngOnInit(): void {
     this.hero = {
