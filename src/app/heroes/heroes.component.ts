@@ -18,7 +18,12 @@ export class HeroesComponent implements OnInit {
 
   getHeroes(): void {
     this.heroService.getHeroes()
-        .subscribe(heroes => this.heroes = heroes);
+        .subscribe(heroes => {
+          this.heroes = heroes;
+          // a workaround to save changes to heroes list, as long as no real
+          // server API has been implemented
+          localStorage.setItem('heroes', JSON.stringify(heroes));
+        });
   }
 
   ngOnInit() {
